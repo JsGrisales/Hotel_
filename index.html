@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+    <!--header-->
+    <header id="cabeceraPrincipal">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-square-h"></i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#descripcionHabitaciones"><i class="fa-solid fa-bed"></i>
+                                Habitaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sectionRedes"><i class="fa-solid fa-address-book"></i>
+                                Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#mapa"><i class="fa-solid fa-map-location-dot"></i> Hubicación</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-success" type="submit">
+                            <a class="text-decoration-none text-light" href="./Login.html">Registrarse</a>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!--fin Navbar-->
+    </header>
+    <!--fin:header-->
+
+    <!--inicio galeria-->
+    <section id="imagenPrincipal">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./imagenes/img2.png" class="d-block w-100" alt="hotel abs">
+                    <!--reserva-->
+                    <div class="carousel-caption d-none d-md-block" id="reserva">
+                        <h2 class="titulo">RESERVAS HOTEL</h2>
+                        <hr>
+                        <p class="fs-4">
+                        <h4>Ven y disfruta con nosotros, los mejores precios y grandes descuentos <br>
+                            ¡Bebida gratis la primera semana!</h4>
+                        </p>
+                        <div id="dataForm" class="row mt-5">
+                            <!--dia de la reserva-->
+                            <div class="col-md-4">
+                                <label for="dateReserva">Ingrese el día</label>
+                                <input type="date" class="form-control mt-2" id="dateReserva">
+                            </div>
+                            <!--mes de la reserva-->
+                            <div class="col-md-4">
+                                <label for="tiempo">Ingrese hora de reserva</label>
+                                <input type="time" id="tiempo" class="form-control mt-2">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="habitacion">Seleccione la habitacion:</label>
+                                <select name="" id="" class="form-control mt-2">
+                                    <option value="habitacion sencilla">Habitacion sencilla</option>
+                                    <option value="habitacion doble">Habitacion doble</option>
+                                    <option value="suite">Suite </option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <!--Boton de la reserva-->
+                        <div class="d-grid gap-2 col-6 mx-auto mt-5" id="botonReserva">
+                            <button type="button" class="btn btn-primary btn-lg mt-5" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal" id="btnReserva"><i class="fa-solid fa-bell-concierge"
+                                    id="iconoReserva"></i> Reserva aquí</button>
+                        </div>
+                        <!--Iconos de las comodidades-->
+                        <div class="row mt-5" id="iconosComodidades">
+                            <h1 class="" id="tituloComodidades">Comodidades</h1>
+                            <hr>
+                            <i class="fa-solid fa-wifi col-md-3 h1 mt-3" id="iconoComodidad"></i>
+                            <i class="fa-solid fa-square-parking col-md-3 h1 mt-3" id=""></i>
+                            <i class="fa-solid fa-paw col-md-3 h1 mt-3" id=""></i>
+                            <i class="fa-solid fa-utensils col-md-3 h1 mt-3" id=""></i>
+                        </div>
+                        <!--fin de los iconos de las comodidades-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--fin:galeria-->
+
+    <!--Inicio de sección habitaciones-->
+    <section id="descripcionHabitaciones" class="mt-4">
+        <div class="container">
+            <div class="row">
+                <!--tarjeta 1-->
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./imagenes/habSencilla.webp" class="card-img-top" alt="SuitePresidencial"
+                            data-bs-toggle="modal" data-bs-target="#habitacionSencillaModal">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Habitación sencilla</h5>
+                            <hr>
+                            <p class="card-text text-center">Habitación para 1-2 personas, televisión por cable e
+                                internet.</p>
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <a href="#" class="btn btn-primary  v-100">Reservar</a>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <a href="#" class="btn btn-success v-100">Contactar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--tarjeta 2-->
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./imagenes/habDoble.jpg" class="card-img-top" alt="..." data-bs-toggle="modal"
+                            data-bs-target="#habitacionDobleModal">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Habitacion doble</h5>
+                            <hr>
+                            <p class="card-text text-center">Habitación doble para 2-4 personas, televisión por cable e
+                                internet y cocina integral.</p>
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <a href="#" class="btn btn-primary  v-100">Reservar</a>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <a href="#" class="btn btn-success v-100">Contactar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--tarjeta 3-->
+                <div class="col md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./imagenes/Suite.jpg" class="card-img-top" alt="suite" data-bs-toggle="modal"
+                            data-bs-target="#suiteModal">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Suite</h5>
+                            <hr>
+                            <p class="card-text text-center">Habitación para 2 personas, televisión por cable, internet,
+                                servicio a la habitación y vista al mar.</p>
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <a href="#" class="btn btn-primary">Reservar</a>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <a href="#" class="btn btn-success">Contactar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--fin de la seccion habitaciones-->
+    <!--Segunda sección de imagenes-->
+    <section id="descripcionHabitaciones" class="mt-4">
+        <div class="container">
+            <div class="row">
+                <!--tarjeta 1-->
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./imagenes/habSencilla.webp" class="card-img-top" alt="SuitePresidencial"
+                            data-bs-toggle="modal" data-bs-target="#habitacionSencillaModal">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Habitación sencilla</h5>
+                            <hr>
+                            <p class="card-text text-center">Habitación para 1-2 personas, televisión por cable e
+                                internet.</p>
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <a href="#" class="btn btn-primary  v-100">Reservar</a>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <a href="#" class="btn btn-success v-100">Contactar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--tarjeta 2-->
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./imagenes/habDoble.jpg" class="card-img-top" alt="..." data-bs-toggle="modal"
+                            data-bs-target="#habitacionDobleModal">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Habitacion doble</h5>
+                            <hr>
+                            <p class="card-text text-center">Habitación doble para 2-4 personas, televisión por cable e
+                                internet y cocina integral.</p>
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <a href="#" class="btn btn-primary  v-100">Reservar</a>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <a href="#" class="btn btn-success v-100">Contactar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--tarjeta 3-->
+                <div class="col md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./imagenes/Suite.jpg" class="card-img-top" alt="suite" data-bs-toggle="modal"
+                            data-bs-target="#suiteModal">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Suite</h5>
+                            <hr>
+                            <p class="card-text text-center">Habitación para 2 personas, televisión por cable, internet,
+                                servicio a la habitación y vista al mar.</p>
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <a href="#" class="btn btn-primary">Reservar</a>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <a href="#" class="btn btn-success">Contactar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--final segunda sección de imagenes-->
+
+    <!--Redes sociales-->
+    <section class="w-100 bg-primary p-3" id="sectionRedes">
+
+        <ul class="d-flex" id="redes">
+            <li class="ms-5">
+                <div class="circuloRedes mt-3" id="facebook"><img src="./imagenes/iconosRedes/facebook.png" alt="">
+                </div>
+            </li>
+            <li class="ms-5">
+                <div class="circuloRedes mt-3" id="instagram"><img src="./imagenes/iconosRedes/instagram.png" alt="">
+                </div>
+            </li>
+            <li class="ms-5">
+                <div class="circuloRedes mt-3" id="twitter"><img src="./imagenes/iconosRedes/twitter.png" alt=""></div>
+            </li>
+            <li class="ms-5">
+                <div class="circuloRedes mt-3" id="youtube"><img src="./imagenes/iconosRedes/youtbe.png" alt=""></div>
+            </li>
+        </ul>
+
+    </section>
+    <!--fin redes sociales-->
+
+    <!--comentarios y mapa-->
+    <section id="comentarioMapa" class="mt-4 mb-3">
+        <div class="container">
+            <h2 class="h4">Su opinion es muy importante</h2>
+            <hr>
+            <div class="row">
+                <div class="col-md-5">
+
+                    <!--inicio del fomulario-->
+                    <div clas="row">
+                        <div class="col-md-6"> Nombre
+                            <input type="text" class="form-control" placeholder="Ingrese su nombre" id="nombre"
+                                name="nombre">
+                        </div>
+                        <div class="col-md-6"> Email
+                            <input type="email" class="form-control" placeholder="Ingrese email" id="email">
+                        </div>
+                        <div class="col-md-6"> telefono
+                            <input type="tel" class="form-control" placeholder="Ingrese su whatsapp" id="tel">
+                        </div>
+                        <div class="col-md-6"><label for="">ingrese su comentario</label>
+                            <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <!--fin del formulario-->
+                    <button type="button" class="btn btn-primary mt-2 w-50"><i class="fa-solid fa-paper-plane"></i>
+                        Enviar</button>
+
+                </div>
+                <!--mapa-->
+                <div class="col-md-7" id="mapa">
+                    <div class="row">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45346.67337053197!2d-72.60367026411905!3d46.359787110380196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc7c603645f7951%3A0xfc01ecd793e14d17!2sPOP%20Museum!5e0!3m2!1ses!2sco!4v1651941382930!5m2!1ses!2sco"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--fin mapa-->
+    </section>
+
+
+
+    <!--fin comentarios y mapas-->
+
+
+    <!--inicio del modal-->
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fa-solid fa-clipboard"></i> FORMULARIO</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--Formulario-->
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-4">
+                            <label for="validationCustom01" class="form-label">Nombres</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustom02" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="validationCustom02" value="" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustomUsername" class="form-label">Correo</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                <input type="text" class="form-control" id="validationCustomUsername"
+                                    aria-describedby="inputGroupPrepend" required>
+                                <div class="invalid-feedback">
+                                    Please choose a username.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="validationCustom04" class="form-label">Departamento</label>
+                            <select class="form-select" id="validationCustom04" required>
+                                <option selected disabled value="">Elegir</option>
+                                <option>Risaralda</option>
+                                <option>Cundinamarca</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="validationCustom04" class="form-label">Ciudad</label>
+                            <select class="form-select" id="validationCustom04" required>
+                                <option selected disabled value="">Elegir</option>
+                                <option>Pereira</option>
+                                <option>Dosquebradas</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid state.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom03" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid city.
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                <label class="form-check-label" for="invalidCheck">
+                                    Acepto los términos y condiciones
+                                </label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-primary" type="submit">
+                                Enviar formulario</button>
+                        </div>
+                    </form>
+                    <!--fin formulario-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"> <i
+                            class="fa-regular fa-circle-xmark"></i> Cerrar</button>
+                    <button type="button" class="btn btn-primary"> <i class="fa-solid fa-clipboard-check"></i> Guardar
+                        cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Registrar Reserva-->
+    <!--modal de carga galeria habitacionSencillaModal-->
+    <div class="modal fade" id="habitacionSencillaModal" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"><i class="fa-solid fa-object-group"></i> Suite
+                        Presidencial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <!--Carrusel-->
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/habSencilla.webp" class="d-block w-100" alt="habitacionSencilla1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./imagenes/habSencilla.webp" class="d-block w-100" alt="habitacionSencilla2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./imagenes/habSencilla.webp" class="d-block w-100" alt="habitacionSencilla3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <!--Final Carrusel-->
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal fin habitacionSencillaModal-->
+
+
+    <!--modal de carga galeria habitacionDobleModal-->
+    <div class="modal fade" id="habitacionDobleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"><i class="fa-solid fa-object-group"></i> habitacion
+                        doble</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <!--Carrusel-->
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="./imagenes/habDoble.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./imagenes/habDoble.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./imagenes/habDoble.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <!--Final Carrusel habitacionDobleModal-->
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal fin-->
+
+
+
+
+
+    <!-- modal de carga galeria suiteModal -->
+    <div class="modal fade" id="suiteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fa-solid fa-object-group"></i> Suite</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--carrusel-->
+                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="10000">
+                                <img src="./imagenes/Suite.jpg" class="d-block w-100" alt="suite1">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="./imagenes/Suite.jpg" class="d-block w-100" alt="suite2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./imagenes/Suite.jpg" class="d-block w-100" alt="suite3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+
+                    </div>
+
+                </div>
+                <!--fin carrusel-->
+                <div class="modal-footer">
+
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="./javascript/acciones.js"></script>
+</body>
+
+</html>
