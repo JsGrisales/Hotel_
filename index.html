@@ -308,8 +308,9 @@
                         </div>
                     </div>
                     <!--fin del formulario-->
-                    <button type="button" class="btn btn-primary mt-2 w-50"><i class="fa-solid fa-paper-plane"></i>
-                        Enviar</button>
+                    <button type="button" class="btn btn-primary mt-2 w-50" id="enviar"><i class="fa-solid fa-paper-plane"></i>
+                        Enviar
+                    </button>
 
                 </div>
                 <!--mapa-->
@@ -345,14 +346,14 @@
                     <form class="row g-3 needs-validation" novalidate>
                         <div class="col-md-4">
                             <label for="validationCustom01" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="validationCustom01" value="" required>
+                            <input type="text" class="form-control" id="nombre" value="" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                         </div>
                         <div class="col-md-4">
                             <label for="validationCustom02" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="validationCustom02" value="" required>
+                            <input type="text" class="form-control" id="apellido" value="" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -361,7 +362,7 @@
                             <label for="validationCustomUsername" class="form-label">Correo</label>
                             <div class="input-group has-validation">
                                 <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                <input type="text" class="form-control" id="validationCustomUsername"
+                                <input type="text" class="form-control" id="correo"
                                     aria-describedby="inputGroupPrepend" required>
                                 <div class="invalid-feedback">
                                     Please choose a username.
@@ -409,7 +410,7 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-primary" type="submit">
+                            <button class="btn btn-primary" type="button">
                                 Enviar formulario</button>
                         </div>
                     </form>
@@ -596,7 +597,7 @@
             crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-        <script src="./javascript/acciones.js"></script>
+        <script src="./javascript/Datos.js"></script>
 </body>
 
 </html>

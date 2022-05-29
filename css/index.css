@@ -67,3 +67,10 @@ ul li img{
     height: 150px;
 }
 
+
+.error{ 
+    border:1px solid red
+}
+.ok{
+    border:1px solid rgba(0, 128, 0, 0.412)
+}
